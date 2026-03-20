@@ -35,23 +35,23 @@ It is aimed at 3D artists, game developers, technical artists, and retro enthusi
 
 ## Preview
 
-### Low-Poly, Dithering, and Texture Workflow
-
-![Preview 1](assets/gifs/preview-01.gif)
-![Preview 2](assets/gifs/preview-02.gif)
-![Preview 3](assets/gifs/preview-03.gif)
-
-### Vertex Wobble and Screen Snapping
-
-![Preview 4](assets/gifs/preview-04.gif)
-![Preview 5](assets/gifs/preview-05.gif)
-![Preview 6](assets/gifs/preview-06.gif)
-
-### Render, Upscale, and Distortion Tools
-
-![Preview 7](assets/gifs/preview-07.gif)
-![Preview 8](assets/gifs/preview-08.gif)
-![Preview 9](assets/gifs/preview-09.gif)
+<p><img src="assets/gifs/preview-01.gif" alt="Preview 1"></p>
+<br>
+<p><img src="assets/gifs/preview-02.gif" alt="Preview 2"></p>
+<br>
+<p><img src="assets/gifs/preview-03.gif" alt="Preview 3"></p>
+<br>
+<p><img src="assets/gifs/preview-04.gif" alt="Preview 4"></p>
+<br>
+<p><img src="assets/gifs/preview-05.gif" alt="Preview 5"></p>
+<br>
+<p><img src="assets/gifs/preview-06.gif" alt="Preview 6"></p>
+<br>
+<p><img src="assets/gifs/preview-07.gif" alt="Preview 7"></p>
+<br>
+<p><img src="assets/gifs/preview-08.gif" alt="Preview 8"></p>
+<br>
+<p><img src="assets/gifs/preview-09.gif" alt="Preview 9"></p>
 
 ## Current Version
 
@@ -105,4 +105,3 @@ See [LICENSE.md](LICENSE.md) for details.
 
 - itch.io: [PSX Retro Tools](https://fawkek.itch.io/psx-retro-tools)
 - X / Twitter: [@fawkek_obj](https://x.com/fawkek_obj)
-
