@@ -26,6 +26,24 @@ It is aimed at 3D artists, game developers, technical artists, and retro enthusi
 - Texture Distort
 - PSX PostFX material preview workflow
 
+## New In 1.6.2: PSX PostFX
+
+PSX PostFX is a non-destructive node-based post effect workflow for previewing retro texture treatment directly in Blender materials. It lets you push textures closer to a PS1-era look without permanently baking destructive changes into every material.
+
+The workflow is designed to stay practical while you work. PostFX now targets only the active material or active visible texture path, so adjustments stay focused instead of affecting every material globally.
+
+You can tweak the look in real time with:
+
+- Brightness
+- Contrast
+- Posterize Steps
+- Dither Strength
+- Dither Scale
+- Gamma
+- Saturation
+
+Version `1.6.2` also improves texture targeting and dithering behavior, with more stable active-image detection, a stronger and more predictable Bayer result on first apply, and more reliable viewport refresh.
+
 ## Why Artists Use It
 
 - Fast one-click setup for a retro rendering pipeline
