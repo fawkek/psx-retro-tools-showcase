@@ -137,6 +137,10 @@ This repository does not grant permission to copy, redistribute, repackage, reve
 
 See [LICENSE.md](LICENSE.md) for details.
 
+## Tags
+
+#Blender · #BlenderAddon · #PSX · #PS1 · #PlayStation · #RetroGraphics · #LowPoly · #PixelArt · #Dithering · #VertexWobble · #VertexSnapping · #TextureBaking · #GouraudShading · #BillboardSprites · #Compositor · #CRT · #GameArt · #GameDev · #IndieDev · #RetroGameDev
+
 ## Links
 
 - itch.io: [PSX Retro Tools](https://fawkek.itch.io/psx-retro-tools)
