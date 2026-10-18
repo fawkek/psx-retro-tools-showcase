@@ -2,7 +2,7 @@
 
 Bring authentic PlayStation 1-style visuals into Blender with a focused toolkit for low-poly rendering, low-resolution textures, vertex lighting, billboards, dithering, wobble, screen snapping, and retro post-processing.
 
-**Downloaded by 8,000+ artists and developers**
+**Downloaded by 16,000+ artists and developers**
 
 [Download on itch.io](https://fawkek.itch.io/psx-retro-tools) · [Read the devlogs](https://fawkek.itch.io/psx-retro-tools/devlog) · [Follow @fawkek_obj](https://x.com/fawkek_obj)
 
@@ -14,6 +14,8 @@ It is aimed at 3D artists, game developers, technical artists, and retro enthusi
 
 ## Features
 
+- **PSX Asset Bake** — bake a multi-material mesh into one packed master texture, one UV map and one material
+- **Texture Blend** — paint a blend mask between two textures directly on the object, preview it live and bake it
 - **Low-Poly Simplifier** for fast mesh reduction and triangulation
 - **Low-Resolution Texture Baking** with per-material baking by default or targeted active-material rebaking
 - **Texture Generator** with checkerboards, gradients, paint-ready bases, and a labeled UV Debug Grid
@@ -28,6 +30,35 @@ It is aimed at 3D artists, game developers, technical artists, and retro enthusi
 - **Built-in English and Russian guides** available from the add-on
 
 ## What's New Since 1.6.2
+
+### 1.7.14 — Texture Blend and PSX Asset Bake
+
+- **Texture Blend:** select a mesh, pick two of its Image Textures, paint a grayscale transition mask directly on the object, preview it live, then bake the blend. Source images and unrelated material slots stay untouched.
+- Only Base Color changes — the original shader's Roughness, Normal and other settings are kept.
+- Auto, Smart UV and Per-Face Atlas unwrap modes for the mask; Auto handles long roads.
+- Source UVs are preserved through Texture Coordinate → Mapping chains.
+- Safe handling of imported object names and optional hiding of the original to prevent z-fighting.
+
+- **PSX Asset Bake:** multi-material, multi-image meshes bake to one master texture and one final material on a `_BAKED` copy — fewer materials and draw calls for game-ready assets.
+- Dedicated `PSX_Baked_UV` map with Smart UV packing, 4 px default margin, alpha preservation and nearest filtering; the PNG is saved next to the .blend file.
+- Fixed Blender 5.2 solid Base Color values being read as white.
+- The classic Per Material / Active Material bake remains available.
+
+### 1.7.12 — Blender Extension Packages
+
+- Distributed as a Blender Extension ZIP with Pillow bundled — no manual pip install or dependency installer.
+- Separate downloads for Windows x64, Linux x64 and one macOS package for both Apple Silicon and Intel.
+- Supports Blender 5.0–5.2.
+- Bake works on material copies: original materials, other objects sharing them, UV maps, selection and bake settings are preserved, and failed bakes restore everything.
+- **Restore Original Materials** after baking, even after saving and reopening the .blend.
+- Undo Dithering restores the first original texture after repeated applies, renaming, resizing and save/reload; dithering keeps alpha.
+
+### 1.7.8–1.7.11 — Stability
+
+- Pixel-Perfect Upscale: the visible upscale value is always used, reapplying is safe, and PPU/Dither ordering is preserved either way.
+- Blender 5.2 Geometry Nodes compatibility for Vertex Screen Snapping and Vertex Wobble PRO.
+- Vertex Screen Snapping picks the selected, active or only scene camera automatically.
+- Fixed Windows Blender 5.1 crashes during live compositor slider updates.
 
 ### 1.7.5 — Self-Contained Compositor and Stability
 
@@ -89,22 +120,22 @@ It is aimed at 3D artists, game developers, technical artists, and retro enthusi
 
 ## Current Version
 
-Version `1.7.5`
+Version `1.7.14`
 
 Highlights from the current release:
 
-- Self-contained PSX Retro Dither compositor with no external `.blend` dependency
-- Improved Windows and Blender 5 compositor stability
-- Safer compositor-chain preservation and reconnection
-- More accurate 3D LUT approximation
-- All major tools from the 1.7.0 and 1.7.4 updates included
+- New Texture Blend: paint and bake transitions between two textures on the object
+- PSX Asset Bake: one texture, one UV map and one material per asset
+- Blender Extension packages with bundled Pillow for Windows, macOS and Linux
+- Safer, reversible baking with Restore Original Materials
+- All tools from the 1.7.0–1.7.11 updates included
 
 ## Compatibility
 
-- Blender `5.0+` for the current `1.7.5` release
+- Blender `5.0`–`5.2` for the current `1.7.14` release
 - Version `1.6.2` remains available separately for Blender `4.3`
-- Tested on Windows and macOS
-- Requires `Pillow` and `NumPy` for applicable texture and processing workflows
+- Packages for Windows x64, macOS (Apple Silicon and Intel) and Linux x64
+- Pillow is bundled; NumPy is provided by Blender — nothing extra to install
 
 ## Installation
 
@@ -112,10 +143,11 @@ The addon itself is distributed through itch.io:
 
 [Download and install from itch.io](https://fawkek.itch.io/psx-retro-tools)
 
+Download the ZIP for your system and install it in Blender via **Edit → Preferences → Get Extensions → Install from Disk**.
+
 The itch.io page includes:
 
-- the latest addon builds
-- dependency installer
+- the latest addon builds for Windows, macOS and Linux
 - installation steps
 - version updates and devlogs
 
@@ -139,7 +171,7 @@ See [LICENSE.md](LICENSE.md) for details.
 
 ## Tags
 
-#Blender · #BlenderAddon · #PSX · #PS1 · #PlayStation · #RetroGraphics · #LowPoly · #PixelArt · #Dithering · #VertexWobble · #VertexSnapping · #TextureBaking · #GouraudShading · #BillboardSprites · #Compositor · #CRT · #GameArt · #GameDev · #IndieDev · #RetroGameDev
+#Blender · #BlenderAddon · #PSX · #PS1 · #PlayStation · #RetroGraphics · #LowPoly · #PixelArt · #Dithering · #VertexWobble · #VertexSnapping · #TextureBaking · #TextureAtlas · #TexturePainting · #GouraudShading · #BillboardSprites · #Compositor · #CRT · #GameArt · #GameDev · #IndieDev · #RetroGameDev
 
 ## Links
 
