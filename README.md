@@ -55,6 +55,8 @@ It is aimed at 3D artists, game developers, technical artists, and retro enthusi
 </tr>
 </table>
 
+[Read the 1.7.15 devlog](https://fawkek.itch.io/psx-retro-tools/devlog/1714194/psx-retro-tools-1715-see-whats-applied-crisp-pixels-and-a-big-fix-pass)
+
 ### 1.7.14 — Texture Blend and PSX Asset Bake
 
 - **Texture Blend:** select a mesh, pick two of its Image Textures, paint a grayscale transition mask directly on the object, preview it live, then bake the blend. Source images and unrelated material slots stay untouched.
