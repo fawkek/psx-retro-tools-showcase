@@ -14,6 +14,7 @@ It is aimed at 3D artists, game developers, technical artists, and retro enthusi
 
 ## Features
 
+- **Applied to** — see every PSX effect on the active object at a glance, toggle, jump to its settings or remove it
 - **PSX Asset Bake** — bake a multi-material mesh into one packed master texture, one UV map and one material
 - **Texture Blend** — paint a blend mask between two textures directly on the object, preview it live and bake it
 - **Low-Poly Simplifier** for fast mesh reduction and triangulation
@@ -30,6 +31,29 @@ It is aimed at 3D artists, game developers, technical artists, and retro enthusi
 - **Built-in English and Russian guides** available from the add-on
 
 ## What's New Since 1.6.2
+
+### 1.7.15 — Applied to, Crisp Pixels and a Big Fix Pass
+
+<p><img src="assets/screenshots/psx-1715-overview.png" alt="PSX Retro Tools 1.7.15 in Blender 5.2"></p>
+
+- **Applied to:** a new status block at the top of the panel lists every PSX effect on the active object — Wobble, Vertex Snapping, Vertex Light, Texture Distort, PostFX, Dithered, Baked, Billboard and more — with a viewport toggle, a jump to its settings and Remove / Restore. A Scene line shows Render resolution, Color Depth, Pixel-Perfect Upscale and Retro Dither.
+- **Pixel-Perfect Upscale, rebuilt:** pixels are now hard squares instead of a blurry mush. Pixelation is measured from the base resolution — 1.0 is the exact PSX grid (e.g. 320×240), with 0.25 steps from 0.5 to 4.0, live updates and the resulting PSX resolution shown in the panel.
+- **Texture Distort** now really animates its scanline wobble, applies without extra clicks and cleans up after itself.
+- **Color Depth 8-bit and 16-bit** now actually reduce colors (RGB332 / RGB565).
+- **Atkinson dithering** fixed — no more colors outside the palette.
+- **Render Settings keeps your own compositor** as a saved node group instead of replacing it.
+- **PSX Retro Dither** is packed into the .blend, so scenes render correctly on another computer or a render farm; re-applying Dither after PPU no longer produces a blank white frame.
+- **Vertex Lighting:** point, spot and area lights no longer blow out to white, hidden lights are ignored, and shared materials keep their texture on other objects.
+
+<p><img src="assets/screenshots/psx-1715-ppu-before-after.png" alt="Pixel-Perfect Upscale: 1.7.14 vs 1.7.15"></p>
+
+<table>
+<tr>
+<td><img src="assets/screenshots/psx-1715-applied-to.png" alt="Applied to block"></td>
+<td><img src="assets/screenshots/psx-1715-ppu-panel.png" alt="Pixel-Perfect Upscale panel"></td>
+<td><img src="assets/screenshots/psx-1715-texture-distort.png" alt="Texture Distort panel"></td>
+</tr>
+</table>
 
 ### 1.7.14 — Texture Blend and PSX Asset Bake
 
@@ -120,19 +144,19 @@ It is aimed at 3D artists, game developers, technical artists, and retro enthusi
 
 ## Current Version
 
-Version `1.7.14`
+Version `1.7.15`
 
 Highlights from the current release:
 
-- New Texture Blend: paint and bake transitions between two textures on the object
-- PSX Asset Bake: one texture, one UV map and one material per asset
-- Blender Extension packages with bundled Pillow for Windows, macOS and Linux
-- Safer, reversible baking with Restore Original Materials
-- All tools from the 1.7.0–1.7.11 updates included
+- New Applied to status block for the active object
+- Crisp Pixel-Perfect Upscale with fractional Pixelation and live updates
+- Animated Texture Distort, real 8/16-bit Color Depth, fixed Atkinson dithering
+- Render Settings preserves your own compositor; Retro Dither pattern travels with the .blend
+- All tools from the 1.7.0–1.7.14 updates included, including Texture Blend and PSX Asset Bake
 
 ## Compatibility
 
-- Blender `5.0`–`5.2` for the current `1.7.14` release
+- Blender `5.0`–`5.2` for the current `1.7.15` release
 - Version `1.6.2` remains available separately for Blender `4.3`
 - Packages for Windows x64, macOS (Apple Silicon and Intel) and Linux x64
 - Pillow is bundled; NumPy is provided by Blender — nothing extra to install
