@@ -32,6 +32,10 @@ It is aimed at 3D artists, game developers, technical artists, and retro enthusi
 
 ## What's New Since 1.6.2
 
+### 1.7.16 — Python 3.14 Support
+
+- Bundles Pillow wheels for Python 3.14, so Blender builds running Python 3.14 (for example Linux distribution packages) can install the extension. No other changes.
+
 ### 1.7.15 — Applied to, Crisp Pixels and a Big Fix Pass
 
 <p><img src="assets/screenshots/psx-1715-overview.png" alt="PSX Retro Tools 1.7.15 in Blender 5.2"></p>
@@ -146,7 +150,7 @@ It is aimed at 3D artists, game developers, technical artists, and retro enthusi
 
 ## Current Version
 
-Version `1.7.15`
+Version `1.7.16`
 
 Highlights from the current release:
 
@@ -158,10 +162,10 @@ Highlights from the current release:
 
 ## Compatibility
 
-- Blender `5.0`–`5.2` for the current `1.7.15` release
+- Blender `5.0`–`5.2` for the current `1.7.16` release (also tested on 5.3 beta and 5.4 alpha daily builds)
 - Version `1.6.2` remains available separately for Blender `4.3`
 - Packages for Windows x64, macOS (Apple Silicon and Intel) and Linux x64
-- Pillow is bundled; NumPy is provided by Blender — nothing extra to install
+- Pillow is bundled for Python 3.11, 3.13 and 3.14; NumPy is provided by Blender — nothing extra to install
 
 ## Installation
 
